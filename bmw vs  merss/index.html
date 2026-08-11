@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ```html
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BMW M5 Competition vs Mercedes-AMG CLS 53</title>
+
+    <!-- UNIKAL SHRIFTLAR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050505;
+            color: white;
+            font-family: "Inter", sans-serif;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            z-index: 999;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 7%;
+
+            background: rgba(0,0,0,.78);
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .logo {
+            font-family: "Orbitron", sans-serif;
+            font-weight: 900;
+            font-size: 21px;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: #ff3030;
+        }
+
+        nav a {
+            color: #999;
+            text-decoration: none;
+
+            margin-left: 30px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 120px 7% 80px;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.45),
+                    rgba(0,0,0,.95)
+                ),
+                url("https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=2200&q=90");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+        }
+
+        .hero-small {
+            color: #888;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 7px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: "Anton", sans-serif;
+
+            font-size: clamp(70px, 12vw, 160px);
+
+            line-height: .85;
+
+            letter-spacing: 4px;
+        }
+
+        .hero h1 span {
+            color: #666;
+        }
+
+        .hero-text {
+            max-width: 650px;
+
+            margin: 35px auto;
+
+            color: #aaa;
+
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+
+            padding: 15px 32px;
+
+            border: 1px solid rgba(255,255,255,.3);
+
+            color: white;
+
+            text-decoration: none;
+
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 11px;
+            letter-spacing: 3px;
+
+            transition: .3s;
+        }
+
+        .hero-btn:hover {
+            background: white;
+            color: black;
+            transform: translateY(-5px);
+        }
+
+
+        /* ================= UMUMIY ================= */
+
+        section {
+            padding: 110px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 65px;
+        }
+
+        .section-title small {
+            color: #666;
+
+            font-size: 11px;
+            letter-spacing: 6px;
+        }
+
+        .section-title h2 {
+            margin-top: 15px;
+
+            font-family: "Anton", sans-serif;
+
+            font-size: 60px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* ================= AVTOMOBILLAR ================= */
+
+        .cars {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+
+            max-width: 1400px;
+
+            margin: auto;
+        }
+
+        .car {
+            height: 650px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 8px;
+
+            background-size: cover;
+            background-position: center;
+
+            transition: .5s;
+        }
+
+        .car:hover {
+            transform: translateY(-10px);
+        }
+
+        .bmw {
+            background-image:
+                linear-gradient(
+                    transparent 20%,
+                    rgba(0,0,0,.95)
+                ),
+                url("https://images.unsplash.com/photo-1556189250-72ba954cfc2b?auto=format&fit=crop&w=1500&q=90");
+        }
+
+        .mercedes {
+            background-image:
+                linear-gradient(
+                    transparent 20%,
+                    rgba(0,0,0,.95)
+                ),
+                url("https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1500&q=90");
+        }
+
+        .car-info {
+            position: absolute;
+
+            left: 38px;
+            right: 38px;
+            bottom: 38px;
+        }
+
+        .brand {
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 12px;
+
+            color: #999;
+
+            letter-spacing: 5px;
+        }
+
+        .car h3 {
+            font-family: "Anton", sans-serif;
+
+            font-size: 72px;
+
+            margin: 5px 0;
+
+            letter-spacing: 3px;
+        }
+
+        .car-description {
+            color: #aaa;
+
+            line-height: 1.7;
+
+            max-width: 500px;
+        }
+
+        .mini-stats {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+        .mini-stat {
+            padding: 18px;
+
+            background: rgba(255,255,255,.06);
+
+            border: 1px solid rgba(255,255,255,.1);
+        }
+
+        .mini-stat small {
+            color: #666;
+
+            display: block;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+        }
+
+        .mini-stat strong {
+            display: block;
+
+            margin-top: 7px;
+
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 23px;
+        }
+
+
+        /* ================= TAQQOSLASH ================= */
+
+        .comparison {
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+        .compare-row {
+            display: grid;
+
+            grid-template-columns: 1fr 180px 1fr;
+
+            align-items: center;
+
+            padding: 25px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .compare-row div {
+            text-align: center;
+        }
+
+        .compare-value {
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 20px;
+
+            font-weight: 800;
+        }
+
+        .compare-name {
+            color: #666;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+        .winner {
+            color: #45ff9a;
+        }
+
+        .winner::after {
+            content: "  ✓";
+            color: #45ff9a;
+        }
+
+
+        /* ================= KUCH BARS ================= */
+
+        .power-area {
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+        .power-item {
+            margin-bottom: 40px;
+        }
+
+        .power-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 10px;
+        }
+
+        .power-header span:first-child {
+            font-weight: 700;
+        }
+
+        .power-header span:last-child {
+            font-family: "Orbitron", sans-serif;
+        }
+
+        .bar {
+            height: 13px;
+
+            background: #191919;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+
+            border-radius: 20px;
+
+            animation: loading 1.5s ease;
+        }
+
+        .bmw-power {
+            width: 100%;
+
+            background: linear-gradient(
+                90deg,
+                #087cff,
+                #5bb7ff
+            );
+        }
+
+        .merc-power {
+            width: 69.5%;
+
+            background: linear-gradient(
+                90deg,
+                #777,
+                #eee
+            );
+        }
+
+        @keyframes loading {
+
+            from {
+                width: 0;
+            }
+
+        }
+
+
+        /* ================= BALLAR ================= */
+
+        .score-board {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+        .score-card {
+            padding: 45px;
+
+            text-align: center;
+
+            border: 1px solid rgba(255,255,255,.1);
+
+            background: #0b0b0b;
+        }
+
+        .score-card h3 {
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 14px;
+
+            letter-spacing: 3px;
+
+            color: #aaa;
+        }
+
+        .score {
+            font-family: "Anton", sans-serif;
+
+            font-size: 100px;
+
+            line-height: 1;
+
+            margin: 20px 0;
+        }
+
+        .score-card p {
+            color: #666;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* ================= VERDIKT ================= */
+
+        .verdict {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 90px 50px;
+
+            text-align: center;
+
+            border: 1px solid rgba(255,255,255,.13);
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(255,255,255,.08),
+                    transparent 65%
+                );
+        }
+
+        .verdict small {
+            color: #666;
+
+            letter-spacing: 6px;
+        }
+
+        .verdict h2 {
+            font-family: "Anton", sans-serif;
+
+            font-size: clamp(55px, 9vw, 100px);
+
+            margin: 15px 0;
+        }
+
+        .verdict p {
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #aaa;
+
+            line-height: 1.8;
+        }
+
+        .winner-badge {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 14px 28px;
+
+            border: 1px solid #45ff9a;
+
+            color: #45ff9a;
+
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+
+        /* ================= DALILLAR ================= */
+
+        .facts {
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .fact {
+            padding: 25px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .fact h4 {
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+        }
+
+        .fact p {
+            color: #999;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+        .source {
+            margin-top: 40px;
+
+            padding: 25px;
+
+            background: #0c0c0c;
+
+            border-left: 3px solid #555;
+
+            color: #777;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 45px 7%;
+
+            text-align: center;
+
+            color: #555;
+
+            border-top: 1px solid rgba(255,255,255,.08);
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+
+        /* ================= TELEFON ================= */
+
+        @media(max-width: 800px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            .cars {
+                grid-template-columns: 1fr;
+            }
+
+            .car {
+                height: 560px;
+            }
+
+            .compare-row {
+                grid-template-columns: 1fr 100px 1fr;
+            }
+
+            .compare-value {
+                font-size: 14px;
+            }
+
+            .score-board {
+                grid-template-columns: 1fr;
+            }
+
+            .verdict {
+                padding: 60px 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <div class="logo">
+        AUTO<span>WAR</span>
+    </div>
+
+    <nav>
+
+        <a href="#avtomobillar">AVTOMOBILLAR</a>
+
+        <a href="#taqqoslash">TAQQOSLASH</a>
+
+        <a href="#kuch">KUCH</a>
+
+        <a href="#natija">NATIJA</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            GERMANIYANING IKKI AFSONASI
+        </div>
+
+        <h1>
+            BMW M5
+            <span>VS</span>
+            CLS 53
+        </h1>
+
+        <p class="hero-text">
+
+            BMW M5 Competition va Mercedes-AMG CLS 53 4MATIC+.
+
+            Tezlik, quvvat, moment, dvigatel, haydash tizimi
+            va umumiy imkoniyatlar bo‘yicha raqamlar asosida
+            haqiqiy taqqoslash.
+
+        </p>
+
+        <a href="#avtomobillar" class="hero-btn">
+            TAQQOSLASHNI BOSHLASH
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= AVTOMOBILLAR ================= -->
+
+<section id="avtomobillar">
+
+    <div class="section-title">
+
+        <small>ASOSIY RAQIBLAR</small>
+
+        <h2>IKKI AFSONA</h2>
+
+    </div>
+
+
+    <div class="cars">
+
+
+        <!-- BMW -->
+
+        <div class="car bmw">
+
+            <div class="car-info">
+
+                <div class="brand">
+                    BMW M
+                </div>
+
+                <h3>M5 COMPETITION</h3>
+
+                <p class="car-description">
+
+                    F90 avlodidagi BMW M5 Competition —
+                    yuqori unumdorlikka mo‘ljallangan
+                    4.4 litrli TwinPower Turbo V8 dvigatelli
+                    sport sedan.
+
+                </p>
+
+
+                <div class="mini-stats">
+
+                    <div class="mini-stat">
+
+                        <small>QUVVAT</small>
+
+                        <strong>617 HP</strong>
+
+                    </div>
+
+                    <div class="mini-stat">
+
+                        <small>0–60 MPH</small>
+
+                        <strong>3.1 S</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MERCEDES -->
+
+        <div class="car mercedes">
+
+            <div class="car-info">
+
+                <div class="brand">
+                    MERCEDES-AMG
+                </div>
+
+                <h3>CLS 53</h3>
+
+                <p class="car-description">
+
+                    Mercedes-AMG CLS 53 4MATIC+ —
+                    3.0 litrli turbo qatorli 6 silindrli
+                    dvigatel va elektr yordam tizimiga ega
+                    kuchli premium sedan.
+
+                </p>
+
+
+                <div class="mini-stats">
+
+                    <div class="mini-stat">
+
+                        <small>QUVVAT</small>
+
+                        <strong>429 HP</strong>
+
+                    </div>
+
+                    <div class="mini-stat">
+
+                        <small>0–60 MPH</small>
+
+                        <strong>4.3 S</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= TAQQOSLASH ================= -->
+
+<section id="taqqoslash">
+
+    <div class="section-title">
+
+        <small>HAQIQIY KO‘RSATKICHLAR</small>
+
+        <h2>YUZMA-YUZ</h2>
+
+    </div>
+
+
+    <div class="comparison">
+
+
+        <!-- QUVVAT -->
+
+        <div class="compare-row">
+
+            <div class="compare-value winner">
+                617 HP
+            </div>
+
+            <div class="compare-name">
+                QUVVAT
+            </div>
+
+            <div class="compare-value">
+                429 HP
+            </div>
+
+        </div>
+
+
+        <!-- TEZLANISH -->
+
+        <div class="compare-row">
+
+            <div class="compare-value winner">
+                3.1 S
+            </div>
+
+            <div class="compare-name">
+                0–60 MPH
+            </div>
+
+            <div class="compare-value">
+                4.3 S
+            </div>
+
+        </div>
+
+
+        <!-- DVIGATEL -->
+
+        <div class="compare-row">
+
+            <div class="compare-value winner">
+                4.4 L V8
+            </div>
+
+            <div class="compare-name">
+                DVIGATEL
+            </div>
+
+            <div class="compare-value">
+                3.0 L I6
+            </div>
+
+        </div>
+
+
+        <!-- MOMENT -->
+
+        <div class="compare-row">
+
+            <div class="compare-value winner">
+                553 LB-FT
+            </div>
+
+            <div class="compare-name">
+                MOMENT
+            </div>
+
+            <div class="compare-value">
+                384 LB-FT
+            </div>
+
+        </div>
+
+
+        <!-- TORTISH -->
+
+        <div class="compare-row">
+
+            <div class="compare-value">
+                M xDRIVE
+            </div>
+
+            <div class="compare-name">
+                TORTISH
+            </div>
+
+            <div class="compare-value winner">
+                4MATIC+
+            </div>
+
+        </div>
+
+
+        <!-- UZATMA -->
+
+        <div class="compare-row">
+
+            <div class="compare-value winner">
+                8 BOSQICH
+            </div>
+
+            <div class="compare-name">
+                UZATMA
+            </div>
+
+            <div class="compare-value">
+                9 BOSQICH
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= KUCH ================= -->
+
+<section id="kuch">
+
+    <div class="section-title">
+
+        <small>DVIGATEL SALOHIYATI</small>
+
+        <h2>QUVVAT JANGI</h2>
+
+    </div>
+
+
+    <div class="power-area">
+
+
+        <div class="power-item">
+
+            <div class="power-header">
+
+                <span>
+                    BMW M5 Competition
+                </span>
+
+                <span>
+                    617 HP
+                </span>
+
+            </div>
+
+            <div class="bar">
+
+                <div class="fill bmw-power"></div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="power-item">
+
+            <div class="power-header">
+
+                <span>
+                    Mercedes-AMG CLS 53
+                </span>
+
+                <span>
+                    429 HP
+                </span>
+
+            </div>
+
+            <div class="bar">
+
+                <div class="fill merc-power"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BALLAR ================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <small>YAKUNIY HISOB</small>
+
+        <h2>BALLAR</h2>
+
+    </div>
+
+
+    <div class="score-board">
+
+
+        <div class="score-card">
+
+            <h3>BMW M5 COMPETITION</h3>
+
+            <div class="score">
+                5
+            </div>
+
+            <p>
+                6 MEZONDAN
+            </p>
+
+        </div>
+
+
+        <div class="score-card">
+
+            <h3>MERCEDES CLS 53</h3>
+
+            <div class="score">
+                1
+            </div>
+
+            <p>
+                6 MEZONDAN
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= NATIJA ================= -->
+
+<section id="natija">
+
+    <div class="verdict">
+
+        <small>UMUMIY G‘OLIB</small>
+
+        <h2>BMW M5</h2>
+
+        <p>
+
+            Ushbu taqqoslashda BMW M5 Competition
+            umumiy g‘olib bo‘ldi.
+
+            <br><br>
+
+            M5 Competition 617 ot kuchiga ega bo‘lib,
+            CLS 53 ning 429 ot kuchidan sezilarli darajada
+            kuchliroq.
+
+            <br><br>
+
+            0–60 mph tezlanishda ham M5 Competition
+            3.1 soniyalik ko‘rsatkich bilan CLS 53 ning
+            4.3 soniyalik natijasidan ustun.
+
+            <br><br>
+
+            Katta 4.4 litrli V8 dvigatel, yuqori quvvat
+            va kuchli moment M5 Competition'ni
+            sof sport ko‘rsatkichlari bo‘yicha oldinga
+            olib chiqadi.
+
+        </p>
+
+        <div class="winner-badge">
+
+            🏆 G‘OLIB — BMW M5 COMPETITION
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= DALILLAR ================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <small>FAKTLAR</small>
+
+        <h2>HAQIQIY MA’LUMOTLAR</h2>
+
+    </div>
+
+
+    <div class="facts">
+
+
+        <div class="fact">
+
+            <h4>01 — QUVVAT</h4>
+
+            <p>
+
+                BMW M5 Competition — 617 ot kuchi.
+                Mercedes-AMG CLS 53 — 429 ot kuchi.
+
+                Ushbu mezonda BMW aniq ustun.
+
+            </p>
+
+        </div>
+
+
+        <div class="fact">
+
+            <h4>02 — TEZLANISH</h4>
+
+            <p>
+
+                BMW M5 Competition 0–60 mph tezlanishni
+                taxminan 3.1 soniyada bajaradi.
+
+                CLS 53 esa taxminan 4.3 soniya.
+
+            </p>
+
+        </div>
+
+
+        <div class="fact">
+
+            <h4>03 — DVIGATEL</h4>
+
+            <p>
+
+                M5 Competition 4.4 litrli TwinPower Turbo
+                V8 dvigatelidan foydalanadi.
+
+                CLS 53 esa 3.0 litrli turbo qatorli
+                6 silindrli dvigatelga ega.
+
+            </p>
+
+        </div>
+
+
+        <div class="fact">
+
+            <h4>04 — UMUMIY XULOSA</h4>
+
+            <p>
+
+                Agar asosiy maqsad tezlik, quvvat va sport
+                ko‘rsatkichlari bo‘lsa, ushbu ikki model
+                orasida BMW M5 Competition ustun.
+
+            </p>
+
+        </div>
+
+
+        <div class="source">
+
+            <strong>MANBALAR</strong>
+
+            <br><br>
+
+            BMW — M5 texnik ma’lumotlari:
+            BMW rasmiy ma’lumotlari.
+
+            <br>
+
+            Mercedes-Benz — CLS 53 AMG:
+            Mercedes-Benz rasmiy ma’lumotlari.
+
+            <br><br>
+
+            Eslatma: ishlab chiqaruvchi ko‘rsatkichlari
+            bozor, ishlab chiqarilgan yil va avtomobil
+            konfiguratsiyasiga qarab farq qilishi mumkin.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    BMW M5 VS MERCEDES-AMG CLS 53
+
+    <br><br>
+
+    HAQIQIY MA’LUMOTLAR ASOSIDA TAQQOSLASH
+
+</footer>
+
+
+</body>
+</html>
+```
+
+</body>
+</html>
